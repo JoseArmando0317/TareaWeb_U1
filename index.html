@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alojamiento en Ayampe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Hospedaje Ayampe</div>
+            <button id="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+            <ul id="menu" class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección 1 -->
+        <section id="inicio">
+            <h1>Descanso ideal en la costa</h1>
+            <p>Confort, tranquilidad y la mejor atención a pasos de la playa.</p>
+        </section>
+
+        <!-- Sección 2 -->
+        <section id="habitaciones">
+            <h2>Nuestras Habitaciones</h2>
+            <div class="tarjeta-habitacion">
+                <!-- Recuerda poner una imagen real en tu carpeta y cambiar el src -->
+                <img src="cuarto1.jpg" alt="Habitación Don César con cama confortable y excelente iluminación">
+                <h3>Habitación Don César</h3>
+                <p>Espacio amplio y acogedor ideal para tu descanso.</p>
+            </div>
+            <div class="tarjeta-habitacion">
+                <img src="cuarto2.jpg" alt="Habitación Don Ecua lista para recibir huéspedes">
+                <h3>Habitación Don Ecua</h3>
+                <p>Comodidad garantizada con acceso rápido a las áreas comunes.</p>
+            </div>
+        </section>
+
+        <!-- Sección 3 -->
+        <section id="servicios">
+            <h2>Servicios Incluidos</h2>
+            <p>Disfruta de conexión WiFi, acceso por caja de seguridad (lockbox) y coordinación directa de llegadas con Doris para un check-in sin complicaciones.</p>
+        </section>
+
+        <!-- Sección 4 -->
+        <section id="contacto">
+            <h2>Solicita tu Reserva</h2>
+            <form id="reserva-form">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="fecha">Fecha de llegada:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hospedaje Ayampe. Todos los derechos reservados.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

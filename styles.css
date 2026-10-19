@@ -1,0 +1,143 @@
+/* Variables CSS */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #007bb5;
+    --color-fondo: #f4f7f6;
+    --espaciado: 1.5rem;
+}
+
+/* Base y Mobile First */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    line-height: 1.6;
+}
+
+/* Imágenes fluidas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+section {
+    padding: var(--espaciado);
+    margin-bottom: 20px;
+}
+
+/* Navegación - Flexbox */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--espaciado);
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+}
+
+#menu-btn {
+    padding: 0.5rem;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.nav-links.activo {
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--color-primario);
+    padding: 0.5rem 0;
+    display: block;
+}
+
+/* Formularios accesibles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 0.75rem;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Media Query 1: Tablets (Adaptación 1) */
+@media (min-width: 768px) {
+    nav {
+        flex-wrap: nowrap;
+    }
+    #menu-btn {
+        display: none; /* Oculta botón en pantallas grandes */
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        gap: 20px;
+        margin-top: 0;
+    }
+    
+    /* Uso de Grid para organizar las habitaciones */
+    #habitaciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Media Query 2: Escritorio (Adaptación 2) */
+@media (min-width: 1024px) {
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
